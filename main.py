@@ -1,9 +1,20 @@
 
 def count_batteries_by_usage(cycles):
+  s = 0
+  r = 0
+  f = 0
+  for i in range(len(cycles)):
+    if cycles[i]<400:
+    	s = s+1
+    elif(cycles[i]>=920):
+     	f = f+1
+    else:  
+     	r = r+1
+      
   return {
-    "lowCount": 0,
-    "mediumCount": 0,
-    "highCount": 0
+    "lowCount": s,
+    "mediumCount": r,
+    "highCount": f
   }
 
 
